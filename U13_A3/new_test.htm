@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Homepage</title>
+
+<style>
+
+body{font-family: Helvetica,sans-serif;
+background-color:#FFFFFF;
+max-width:900px;/*Use max-width for fluid behavior*/
+margin:0 auto; /*A shorthand for centered margins*/
+padding:20px;
+
+div {
+  display: block;
+  justify-content: center;
+}
+
+img {
+float: left;
+margin-right: 15px;
+width: 150px
+height: 150px
+}
+
+
+ b {text-align: center;}
+ 
+ p {
+ text-align: center;
+ }
+
+h1{
+font-family:Ariel black;
+text-align:center;
+}
+
+h2{
+text-align:center;
+}
+
+h3{font-family:Arial bold;
+color:#000000;}
+
+a:link {color:#87CEEB;}
+
+a:visited {color:#00BFFF;}
+
+a:hover {color:#B0C4DE;}
+
+
+* {box-sizing: border-box;}
+
+body { 
+margin: 0;
+font-family: Arial bold; , Ariel black
+}
+
+/*Navigation bar*/
+
+.topnav {
+overflow: hidden;
+background-color: #FFFFFF;
+}
+
+.topnav a {
+float: right;
+display: block;
+text-align: center;
+padding:13px 15px;
+text decoration: none;
+font-size:17px;
+}
+
+.topnav a:hover {
+color:#B0C4DE;
+}
+
+.topnav a.active {
+background-color: #2196F3;
+color: white;
+}
+
+.topnav .search-container {
+margin-right: 8px;
+float: right;
+}
+
+.topnav input[type=text] {
+padding: 8px;
+margin-top: 5px;
+font-size: 17px;
+border: none;
+text-align: right;
+}
+
+.topnav .search-container button {
+float: right;
+padding: 6px 10px:
+margin-top: 8px;
+margin-right: 16px;
+font-size: 17px;
+border: none;
+cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+background: #ccc
+}
+
+.topnav a, .topnav input{type=text}, .topnav .search-container {
+float: none;
+display: block;
+text-align: right;
+width: 100%;
+margin: 0;
+padding: 14px;
+}
+
+.topnav input[type=text] {
+border: 1px solid #ccc;
+}
+
+
+/*slideshow*/
+
+.mySlides {
+position: absolute;
+right: 30%;
+width:30%;
+}
+
+/*button right*/
+
+button {
+position: absolute;
+top:430px;
+right:550px;
+}
+
+/*button left*/
+
+w3-button w3-black w3-display-
+ left {
+position: absolute;
+top:450px;
+left:550px;
+}
+
+/*Video*/
+
+.bottomleft {
+  position: absolute;
+  bottom: 20px;
+  left: 550px;
+  font-size: 20px;
+}
+
+video { 
+  width: 100%;
+  height: auto;
+  opacity: 5;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- search bar -->
+
+<div class="topnav">
+<a href="support.htm">Help</a>
+<a href="about_us.htm">About Us</a>
+<div class="search-container">
+<form action="/action_page.php">
+<input type="text" placeholder="Search.."
+name="search">
+<button type="submit"><i class="fa fa-
+search"></i></button>
+</form>
+</div>
+
+<!-- logo -->
+
+<div>
+<img src="images/MWS_logo.png" alt="North Wales Attractions Banner image">
+</div>
+ 
+
+<!-- navigation bar -->
+
+<nav>
+
+<br>
+<br>
+<p>
+<a href="index.htm">Homepage</a>
+<a href="accessories.htm">Accessories</a> 
+<a href="mobile_devices.htm">Mobile devices</a> 
+<a href="sim_deals.htm">SIM deals</a>
+<a href="broadband_deals.htm">Broadband deals</a>
+</p>
+
+</nav>
+
+ <!-- javascript greeting -->
+ 
+<br>
+<h2 id="demo"></h2>
+ 
+<script>
+
+//Time of day message script- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+var Digital=new Date()
+var hours=Digital.getHours()
+
+//Configure message below to your own.
+if (hours>=5&&hours<=11) //MESSAGE FOR MORNING
+document.write('<b>Good morning! bore da!</b>')
+else if (hours==12) //MESSAGE FOR NOON
+document.write('<b>Time for Lunch! Cinio!</b>')
+else if (hours>=13&&hours<=17) //MESSAGE FOR AFTERNOON
+document.write('<b>Good afternoon! prynhawn da!</b>')
+else if (hours>=18&&hours<=20) //MESSAGE FOR EVENING (6pm-8pm)
+document.write('<b>Good evening!nos da!</b>')
+else if (hours>=21&&hours<=11) //MESSAGE FOR NIGHT (9pm-11pm)
+document.write('<b>Thank you for staying up late with us! Diolch!  </b>')
+else //MESSAGE FOR LATE NIGHT, EARLY MORNING (12pm-4am)
+document.write('<b>Who need sleep when you can find good deals! Helô!</b>')
+
+</script>
+ 
+ <!-- Heading -->
+ 
+ <br>
+ 
+<h1 style="text-align:center;">Homepage</h1>
+
+<!-- Slideshow -->
+
+<br>
+<br>
+
+<div class="w3-content w3-display-container">
+ <img class="mySlides" src="images/galaxy_a56.avif" 
+ style= "width:35%">
+ <img class="mySlides" src="images/iphone_17.jpg" 
+ style="width:35%">
+  <img class="mySlides" src="images/lens_cover.webp" 
+ style="width:35%">
+
+ <button class="w3-button w3-black w3-display-
+ left" onclick="plusDivs(-1)">&#10094;</button>
+ <button class="w3-button w3-black w3-display-
+ right" onclick="plusDivs(1)">&#10095;</button>
+ </div>
+<script>
+ 
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+	
+	</script>
+
+<!-- Video -->
+
+<div class="bottomleft">
+<br>
+<br>
+<video width="320" height="240" controls>
+  <source src="https://youtu.be/FrZ3n-XOX7k"
+  Your browser does not support HTML video.
+</video>
+</div>
+
+</body>
